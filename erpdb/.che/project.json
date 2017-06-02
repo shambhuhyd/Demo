@@ -1,0 +1,1 @@
+{"type":"sap.hdb","builders":{"default":"hdi-builder","configs":{}},"runners":{"configs":{}},"attributes":{"mta_module_parent":["/ERP_Synonym"],"sap.watt.common.setting":["{\"generation\":[{\"templateId\":\"hanatemplates.hanadbproject\",\"templateVersion\":\"1.0.0\",\"dateTimeStamp\":\"Thu, 25 May 2017 08:46:44 GMT\"}]}"]},"mixinTypes":["mtamodule"]}

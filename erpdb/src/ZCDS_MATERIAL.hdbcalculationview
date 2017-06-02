@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="ERP_Synonym.erpdb::ZCDS_MATERIAL" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="true">
+<descriptions defaultDescription="Material Descriptions"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="ERP_Synonym.erpdb::MARA.MARA">
+    <resourceUri>ERP_Synonym.erpdb::MARA.MARA</resourceUri>
+  </DataSource>
+  <DataSource id="ERP_Synonym.erpdb::MAKT.MAKT">
+    <resourceUri>ERP_Synonym.erpdb::MAKT.MAKT</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:JoinView" id="Material" joinType="textTable" cardinality="C1_1" languageColumn="SPRAS" optimizeJoinColumns="true">
+    <viewAttributes>
+      <viewAttribute id="MANDT">
+        <descriptions defaultDescription="MANDT"/>
+      </viewAttribute>
+      <viewAttribute id="MATKL">
+        <descriptions defaultDescription="MATKL"/>
+      </viewAttribute>
+      <viewAttribute id="MATNR">
+        <descriptions defaultDescription="MATNR"/>
+      </viewAttribute>
+      <viewAttribute id="MBRSH">
+        <descriptions defaultDescription="MBRSH"/>
+      </viewAttribute>
+      <viewAttribute id="MTART">
+        <descriptions defaultDescription="MTART"/>
+      </viewAttribute>
+      <viewAttribute id="MAKTX">
+        <descriptions defaultDescription="MAKTX"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="ERP_Synonym.erpdb::MARA.MARA">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATKL" source="MATKL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MBRSH" source="MBRSH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MTART" source="MTART"/>
+    </input>
+    <input node="ERP_Synonym.erpdb::MAKT.MAKT">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MAKTX" source="MAKTX"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MATNR" source="MATNR"/>
+    </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="MATNR"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Material">
+  <attributes>
+    <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANDT"/>
+      <keyMapping columnObjectName="Material" columnName="MANDT"/>
+    </attribute>
+    <attribute id="MATKL" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATKL"/>
+      <keyMapping columnObjectName="Material" columnName="MATKL"/>
+    </attribute>
+    <attribute id="MATNR" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATNR"/>
+      <keyMapping columnObjectName="Material" columnName="MATNR"/>
+    </attribute>
+    <attribute id="MBRSH" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MBRSH"/>
+      <keyMapping columnObjectName="Material" columnName="MBRSH"/>
+    </attribute>
+    <attribute id="MTART" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MTART"/>
+      <keyMapping columnObjectName="Material" columnName="MTART"/>
+    </attribute>
+    <attribute id="MAKTX" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MAKTX"/>
+      <keyMapping columnObjectName="Material" columnName="MAKTX"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="92" y="112"/>
+    
+      <rectangleSize width="140"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Material" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="92" y="217"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+    <shape modelObjectName="ERP_Synonym.erpdb::MARA.MARA" modelObjectNameSpace="Material" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="100" y="25"/>
+      <rectangleSize width="250"/>
+    </shape>
+    <shape modelObjectName="ERP_Synonym.erpdb::MAKT.MAKT" modelObjectNameSpace="Material" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="400" y="25"/>
+      <rectangleSize width="250"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

@@ -1,0 +1,12 @@
+namespace ERP_Synonym.erpdb;
+
+context MAKT{
+ 
+entity MAKT{
+ key MANDT : String(3);
+key MATNR : String(18);
+key SPRAS : String(1);
+MAKTX : String(40);
+};
+
+};

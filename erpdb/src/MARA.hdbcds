@@ -1,0 +1,13 @@
+namespace ERP_Synonym.erpdb;
+
+context MARA{
+ 
+entity MARA{
+ key MANDT : String(3);
+key MATNR : String(18);
+MTART : String(4);
+MBRSH : String(1);
+MATKL : String(9);
+};
+
+};

@@ -1,0 +1,32 @@
+{
+  "ERP_table_grantor": {
+    "object_owner" : {
+      "schema_privileges":[ 
+        { 
+          "reference":"SAPDEC",
+          "privileges_with_grant_option":["SELECT"]
+        }
+        
+      ]
+		},
+		"application_user" : {
+      "object_privileges":[ 
+        { 
+          "schema":"SAPDEC", 
+          "name": "MARA",
+          "privileges":["SELECT","SELECT METADATA"]
+        }			
+		]
+		},
+		"application_user" : {
+      "object_privileges":[ 
+        { 
+          "schema":"SAPDEC", 
+          "name": "MAKT",
+          "privileges":["SELECT"]
+
+        }			
+		]
+	}
+}
+}

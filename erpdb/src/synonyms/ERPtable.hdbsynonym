@@ -1,0 +1,20 @@
+{
+  "ERP_Synonym.erpdb.synonyms::DUMMY": {
+    "target": {
+      "object": "DUMMY",
+      "schema": "SYS"
+    }
+  },
+  "ERP_Synonym.erpdb.synonyms::MARA": {
+    "target": {
+      "object": "MARA",
+      "schema": "SAPDEC"
+    }
+  },
+  "ERP_Synonym.erpdb.synonyms::MAKT": {
+    "target": {
+      "object": "MAKT",
+      "schema": "SAPDEC"
+    }
+  }
+}
